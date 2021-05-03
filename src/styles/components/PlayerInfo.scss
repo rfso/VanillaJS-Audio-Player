@@ -1,0 +1,35 @@
+.player__info {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 1rem 0 0;
+    width: 29rem;
+
+    &__progress {
+        background: #B6B6B6;
+        border-radius: 15px;
+        cursor: pointer;
+        height: 8px;
+        margin-bottom: 2rem;
+        width: 100%;
+
+        .progress {
+            background-color: #000000;
+            border-radius: 15px;
+            height: 100%;
+            transition: width 0.1s linear;
+            width: 0%;
+        }
+    }
+
+    &__artist {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: clamp(1.6rem, 1.3vh, 2rem);
+        font-weight: 450;
+        
+        .volume-image {
+            cursor: pointer;
+        }
+    }
+}

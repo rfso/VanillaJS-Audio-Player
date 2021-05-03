@@ -1,0 +1,25 @@
+.player__controls {
+    display: flex;
+    margin-left: 1.8rem;
+    width: 40%;
+
+    .playing {
+        margin: 0 1.6rem 0 4.8rem;
+    }
+
+    button {
+        background: none;
+	    border: none;
+	    font: inherit;
+	    cursor: pointer;
+	    outline: inherit;
+
+        &:hover {
+           opacity: 0.7;
+        }
+    }
+
+    button + button {
+        margin-left: 3.5rem;
+    }
+}

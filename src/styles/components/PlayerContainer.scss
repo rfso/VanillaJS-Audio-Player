@@ -1,0 +1,21 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: absolute;
+  padding: 2.5rem;
+  background-color: #9e9e9e;
+  background: linear-gradient(195deg, #dedede 0%, #ffffff 81.65%);
+  box-shadow: -11.9402px 44.5614px 92.2667px rgba(51, 51, 51, 0.1875),
+    inset 3.31672px -12.3782px 12.8148px #d6d6d6,
+    inset -3.31672px 12.3782px 12.8148px #ffffff;
+  border-radius: 67.5px;
+}
