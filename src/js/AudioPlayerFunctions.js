@@ -25,20 +25,19 @@ export const AudioPlayerFunctions = () => {
 
   // Define first song as 'better days' and load it
   
-  const songs = ['better days', 'slowmotion']
+  const songs = ['better-days', 'slowmotion']
 
-  
   let songIndex = 0
 
   const loadSong = (song) => {
     songName.innerText = song
 
-    audio.src = `../../music/${song}.mp3`
+    audio.src = `/music/${song}.mp3`
   }
 
   loadSong(songs[songIndex])
 
-  // Audio player standard functionalities
+  // Audio player basic functionalities
 
   const playSong = () => {
     audio.play()
