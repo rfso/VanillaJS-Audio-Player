@@ -1,10 +1,10 @@
 .player__controls {
     display: flex;
     margin-left: 1.8rem;
-    width: 40%;
+    width: 20rem;
 
     .playing {
-        margin: 0 1.6rem 0 4.8rem;
+        margin: 0 1.7rem 0 4rem;
     }
 
     button {
@@ -12,7 +12,7 @@
 	    border: none;
 	    font: inherit;
 	    cursor: pointer;
-	    outline: inherit;
+	    outline: none;
 
         &:hover {
            opacity: 0.7;

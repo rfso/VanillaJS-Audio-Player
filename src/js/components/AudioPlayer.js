@@ -4,9 +4,11 @@ import { PlayerControls } from './PlayerControls'
 import { AudioPlayerFunctions } from '../AudioPlayerFunctions'
 
 
-export const AudioPlayer = () => {
+const AudioPlayer = () => {
   PlayerContainer()
   PlayerInfo()
   PlayerControls()
   AudioPlayerFunctions()
 }
+
+export default AudioPlayer

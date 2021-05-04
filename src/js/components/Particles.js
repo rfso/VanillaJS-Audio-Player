@@ -1,17 +1,18 @@
+import { createElement } from '../shared'
 import { particlesConfig } from '../particlesConfig'
 
 // Template
-export const Particles = () => {
+const Particles = () => {
   const appDiv = document.querySelector('#app')
 
   const createParticlesJsDiv = () => {
-    const particlesJsDiv = document.createElement('div')
+    const particlesJsDiv = createElement(['div', 'tsparticles', appDiv])
 
     particlesJsDiv.id = 'tsparticles'
-
-    appDiv.appendChild(particlesJsDiv)
   }
 
   createParticlesJsDiv()
   particlesConfig()
 }
+
+export default Particles

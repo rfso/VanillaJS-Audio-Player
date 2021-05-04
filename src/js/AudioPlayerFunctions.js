@@ -1,7 +1,21 @@
+import { images } from './images'
+
+const {
+  previousBtnImg,
+  nextBtnImg,
+  playBtnImg,
+  pauseBtnImg,
+  unmuteBtnImg,
+  muteBtnImg,
+ } = images
+
 export const AudioPlayerFunctions = () => {
+
+  // Select our elements/items
+
   const audio = document.querySelector('.audio')
   const songName = document.querySelector('.song-name')
-  const playImg = document.querySelector('.playImg')
+  const playImg = document.querySelector('.playBtnImg')
   const playBtn = document.querySelector('.player__controls__play')
   const prevBtn = document.querySelector('.player__controls__prev')
   const nextBtn = document.querySelector('.player__controls__next')
@@ -9,23 +23,28 @@ export const AudioPlayerFunctions = () => {
   const progress = document.querySelector('.progress')
   const progressContainer = document.querySelector('.player__info__progress')
 
+  // Define first song as 'better days' and load it
+  
   const songs = ['better days', 'slowmotion']
 
+  
   let songIndex = 0
 
   const loadSong = (song) => {
     songName.innerText = song
 
-    audio.src = `src/assets/music/${song}.mp3`
+    audio.src = `../../music/${song}.mp3`
   }
 
   loadSong(songs[songIndex])
+
+  // Audio player standard functionalities
 
   const playSong = () => {
     audio.play()
     audio.volume = 0.3
 
-    playImg.src = `src/assets/images/pause.svg`
+    playImg.src = pauseBtnImg
 
     playBtn.classList.add('playing')
   }
@@ -33,7 +52,7 @@ export const AudioPlayerFunctions = () => {
   const pauseSong = () => {
     audio.pause()
 
-    playImg.src = `src/assets/images/play.svg`
+    playImg.src = playBtnImg
 
     playBtn.classList.remove('playing')
   }
@@ -63,7 +82,7 @@ export const AudioPlayerFunctions = () => {
   const muteSong = () => {
     audio.muted = true
 
-    volumeBtn.src = `/src/assets/images/mute.svg`
+    volumeBtn.src = muteBtnImg
 
     volumeBtn.classList.add('muted')
   }
@@ -71,7 +90,7 @@ export const AudioPlayerFunctions = () => {
   const unmuteSong = () => {
     audio.muted = false
 
-    volumeBtn.src = `/src/assets/images/volumeDefault.svg`
+    volumeBtn.src = unmuteBtnImg
 
     volumeBtn.classList.remove('muted')
   }
@@ -94,7 +113,6 @@ export const AudioPlayerFunctions = () => {
   // Our Event Listeners //
 
   // Mute/unmute
-
   volumeBtn.addEventListener('click', () => {
     const isMuted = volumeBtn.classList.contains('muted')
 
@@ -102,7 +120,6 @@ export const AudioPlayerFunctions = () => {
   })
 
   // Play/pause
-
   playBtn.addEventListener('click', () => {
     const isPlaying = playBtn.classList.contains('playing')
 
@@ -110,12 +127,10 @@ export const AudioPlayerFunctions = () => {
   })
 
   // Next/Previous song
-
   prevBtn.addEventListener('click', prevSong)
   nextBtn.addEventListener('click', nextSong)
 
   // Audio/Progress
-
   audio.addEventListener('timeupdate', updateProgress)
 
   progressContainer.addEventListener('click', setProgress)

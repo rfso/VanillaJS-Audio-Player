@@ -1,0 +1,9 @@
+.logo {
+    align-self: flex-start;
+    margin-top: 2rem;
+    position: relative;
+
+    .logo:hover {
+        opacity: 0.8;
+    }
+}

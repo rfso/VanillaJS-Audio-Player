@@ -1,42 +1,23 @@
-import volumeDefaultImg from '../../assets/images/volumeDefault.svg'
+import { createElement } from '../shared'
+import { images } from '../images'
+
+const { unmuteBtnImg } = images
 
 // Template
 export const PlayerInfo = () => {
   const mainContainer = document.querySelector('main')
-
-  const infoDiv = document.createElement('div')
-
-  infoDiv.classList.add('player__info')
-
-  mainContainer.appendChild(infoDiv)
+  const songInfoDiv = createElement(['div', 'player__info', mainContainer])
 
   const createProgressBar = () => {
-    const infoProgressDiv = document.createElement('div')
-    const progressBarDiv = document.createElement('div')
-
-    infoProgressDiv.classList.add('player__info__progress')
-    progressBarDiv.classList.add('progress')
-
-    infoProgressDiv.appendChild(progressBarDiv)
-
-    infoDiv.append(infoProgressDiv)
+    const infoProgressDiv = createElement(['div', 'player__info__progress', songInfoDiv])
+    const progress = createElement(['div', 'progress', infoProgressDiv])
   }
 
   // Artist name and volume/mute button
   const createSongInfo = () => {
-    const artistInfoDiv = document.createElement('div')
-    const songName = document.createElement('p')
-    const volumeImg = document.createElement('img')
-
-    artistInfoDiv.classList.add('player__info__artist')
-    songName.classList.add('song-name')
-    volumeImg.classList.add('volume-image')
-
-    volumeImg.src = volumeDefaultImg
-    volumeImg.alt = 'Mute Button'
-
-    artistInfoDiv.append(volumeImg, songName)
-    infoDiv.append(artistInfoDiv)
+    const artistInfoDiv = createElement(['div', 'player__info__artist', songInfoDiv])
+    const volumeImgEl = createElement(['img', 'volume-image', artistInfoDiv, unmuteBtnImg])
+    const songName = createElement(['p', 'song-name', artistInfoDiv])
   }
 
   createProgressBar()
