@@ -2,7 +2,7 @@
 
 ## ![mag](https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png) Full Access
 
- -  [Vanilla JS Audio Player](link).
+ -  [Vanilla JS Audio Player](https://vanilla-js-audio-player.vercel.app/).
 
 ## ![pushpin](https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png) General Info
 
