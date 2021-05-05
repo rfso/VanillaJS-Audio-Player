@@ -1,14 +1,14 @@
 import { PlayerContainer } from './PlayerContainer'
 import { PlayerInfo } from './PlayerInfo'
 import { PlayerControls } from './PlayerControls'
-import { AudioPlayerFunctions } from '../AudioPlayerFunctions'
+import { audioPlayerFunctions } from '../audioPlayerFunctions'
 
 
 const AudioPlayer = () => {
   PlayerContainer()
   PlayerInfo()
   PlayerControls()
-  AudioPlayerFunctions()
+  audioPlayerFunctions()
 }
 
 export default AudioPlayer

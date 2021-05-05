@@ -31,7 +31,7 @@ return tsParticles.load("tsparticles", {
           "zIndex": -1
         },
         "detectRetina": true,
-        "fpsLimit": 60,
+        "fpsLimit": 360,
         "infection": {
           "cure": false,
           "delay": 0,
@@ -43,7 +43,7 @@ return tsParticles.load("tsparticles", {
           "detectsOn": "window",
           "events": {
             "onClick": {
-              "enable": true,
+              "enable": false,
               "mode": "repulse"
             },
             "onDiv": {
@@ -53,7 +53,7 @@ return tsParticles.load("tsparticles", {
               "type": "circle"
             },
             "onHover": {
-              "enable": true,
+              "enable": false,
               "mode": "grab",
               "parallax": {
                 "enable": false,
@@ -132,7 +132,7 @@ return tsParticles.load("tsparticles", {
                 "color": {
                   "value": "#ff0000",
                   "animation": {
-                    "enable": true,
+                    "enable": false,
                     "speed": 400,
                     "sync": true
                   }
@@ -174,7 +174,7 @@ return tsParticles.load("tsparticles", {
                 "size": {
                   "value": 5,
                   "animation": {
-                    "enable": true,
+                    "enable": false,
                     "speed": 5,
                     "minimumValue": 1,
                     "sync": true,

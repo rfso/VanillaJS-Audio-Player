@@ -1,15 +1,13 @@
 import { images } from './images'
 
 const {
-  previousBtnImg,
-  nextBtnImg,
   playBtnImg,
   pauseBtnImg,
   unmuteBtnImg,
   muteBtnImg,
  } = images
 
-export const AudioPlayerFunctions = () => {
+export const audioPlayerFunctions = () => {
 
   // Select our elements/items
 
@@ -46,6 +44,8 @@ export const AudioPlayerFunctions = () => {
     playImg.src = pauseBtnImg
 
     playBtn.classList.add('playing')
+    playBtn.classList.add('smooth')
+    playImg.classList.remove('smooth2')
   }
 
   const pauseSong = () => {
@@ -54,6 +54,8 @@ export const AudioPlayerFunctions = () => {
     playImg.src = playBtnImg
 
     playBtn.classList.remove('playing')
+    playBtn.classList.remove('smooth')
+    playImg.classList.add('smooth2')
   }
 
   const nextSong = () => {
