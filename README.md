@@ -17,7 +17,7 @@ To run this project, install it locally using npm:
 
 ```
 $ git clone https://github.com/rfso/VanillaJS-Audio-Player.git
-$ cd ../VanillaJS-Audio-Player
+$ cd VanillaJS-Audio-Player
 $ npm install
 $ npm run dev
 ```   
